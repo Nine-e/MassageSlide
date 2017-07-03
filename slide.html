@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>myslide</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link rel="stylesheet" href="slide.css">
+		<link rel="stylesheet" href="revealjs/css/reveal.css">
+		<link rel="stylesheet" href="revealjs/css/theme/league.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+			<section><h3>遇到的问题及解决方案</h3></section>
+			<section>
+				<section>
+					<h4>1.不同分辨率下页面的适配问题</h4>
+				</section>
+				<section>
+					解决方法:<br>
+					在CSS中运用@media,讨论不同分辨率下的样式<br>
+					<pre><code class="hljs" data-trim contenteditable>
+						/*mobile*/
+						@media screen and (max-width: 750px) {
+						/*橫屏*/
+						@media screen and (orientation: landscape) {
+						.bet {
+						width: 50%;
+						}
+						}
+						/*竖屏*/
+						@media screen and (orientation: portrait) {
+						.bet {
+						width: 80%;
+						}
+						}
+						}
+						/*ipad*/
+						@media screen and (max-width: 1024px) and (min-width: 751px) {
+						.bet {
+						width: 50%;
+						}
+						}
+						/*pc*/
+						@media screen and (min-width: 1025px) {
+						.bet {
+						width: 20%;
+						}
+						}
+					</code></pre>
+				</section>
+			</section>
+			<section>
+			<section><h4>2.字体</h4></section>
+			<section>
+				主要的字体有Montserrat和Lato<br>
+				在CSS中通过  @font-face  引入
+				<pre><code class="hljs" data-trim contenteditable>
+					@font-face{
+					    font-family: Montserrat;
+					    src:url(../lib/Montserrat-Light.otf);
+					}
+					@font-face{
+					    font-family: "Lato";
+					    src:url(../lib/Lato/Lato-Regular.ttf);
+					}
+				</code></pre>
+			</section>
+		</section>
+		<section>
+			<section><h4>3.尾部置于最底层</h4></section>
+			<section>0--------------------------------------------------------------------------------------</section>
+		</section>
+		<section>
+			<section>
+			<h4>4.booking1中的时间样式</h4>
+			<img class="booking-img" src="img/booking1.jpg">
+			<img class="booking-img" src="img/booking2.jpg">
+			</section>
+			<section>0--------------------------------------------------------------------------------------</section>
+		</section>
+		<section>
+			<section>
+			<h4>5.therapists 页面不同分辨率下介绍段落的每行断句相同，英文之间还有分隔符</h4>
+			<img class="thera-img" src="img/thera.png">
+			</section>
+			<section>0--------------------------------------------------------------------------------------</section>
+		</section>
+		<section><h3>心得体会</h3></section>
+		<section>
+		万事开头难，项目前期我们为了不同分辨率的适配做了许多工作，尝试了很多方法。<br>
+		小组成员各司其职又互帮互助才使得项目取得令人满意的效果
+		</section>
+	</div>
+</div>
+<script type="text/javascript" src="revealjs/lib/js/head.min.js"></script>
+<script type="text/javascript" src="revealjs/js/reveal.js"></script>
+<script type="text/javascript" src="slide.js"></script>
+</body>
+</html>
